@@ -24,7 +24,8 @@ RUN curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.20
 # USER vscode
 RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@latest && \
     go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest && \
-    go install google.golang.org/grpc
+    go install google.golang.org/grpc && \
+    go install github.com/ktr0731/evans@latest
 
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
